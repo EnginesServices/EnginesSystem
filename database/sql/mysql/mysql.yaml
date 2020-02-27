@@ -15,7 +15,7 @@ immutable: false
 attach_post_build: false
 attach_requires_restart: false
 soft_service: false
-shareable: false
+shareable: true
 consumer_exportable: true
 consumerless: false
 target_environment_variables:
@@ -164,6 +164,26 @@ consumer_params:
       validation:
         pattern: 
         message: 
+  char_set:
+    name: char_set
+    value: utf8
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+    input:
+      label: 
+      type: string
+      title: Character set
+      comment: 
+      hint: 
+      placeholder: 
+      collection:
+        items: {}
+        include_blank: false
+      validation:
+        pattern: 
+        message: 
 configurators:
   db_master_pass:
     name: db_master_pass
@@ -194,7 +214,20 @@ configurators:
         validation:
           pattern: 
           message: 
-service_actionators: {}
+service_actionators:
+  repair_all:
+    name: repair_all
+    label: Reapir database
+    description: 
+    return_type: plain_text
+    return_file_name: 
+    timeout: ''
+    enable_logging: false
+    background: false
+    script_sudo:
+      language: 
+      content: 
+    variables: []
 constants:
   rails_flavor:
     name: rails_flavor
