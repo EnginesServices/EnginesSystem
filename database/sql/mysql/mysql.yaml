@@ -164,6 +164,26 @@ consumer_params:
       validation:
         pattern: 
         message: 
+  char_set:
+    name: char_set
+    value: utf8
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+    input:
+      label: 
+      type: string
+      title: Character set
+      comment: 
+      hint: 
+      placeholder: 
+      collection:
+        items: {}
+        include_blank: false
+      validation:
+        pattern: 
+        message: 
 configurators:
   db_master_pass:
     name: db_master_pass
