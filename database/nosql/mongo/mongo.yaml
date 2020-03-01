@@ -27,7 +27,7 @@ target_environment_variables:
     environment_variable_name: dbname
   db_username:
     variable_name: db_username
-    environment_variable_name: db_username
+    environment_variable_name: dbuser
   database_host:
     variable_name: database_host
     environment_variable_name: dbhost
