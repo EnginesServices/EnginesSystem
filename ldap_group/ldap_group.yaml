@@ -131,6 +131,29 @@ consumer_params:
       validation:
         pattern: 
         message: 
+  ldap_group_type:
+    name: ldap_group_type
+    value: posix
+    mandatory: true
+    ask_at_build_time: true
+    build_time_only: false
+    immutable: true
+    input:
+      label: 
+      type: select
+      title: 
+      comment: 
+      hint: 
+      placeholder: 
+      collection:
+        items:
+          groupOfUniqueNames: Group of unique names
+          groupOfNames: Group of names
+          posix: Posix group
+        include_blank: false
+      validation:
+        pattern: 
+        message: 
 configurators: {}
 service_actionators: {}
 constants:
