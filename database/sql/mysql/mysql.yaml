@@ -214,8 +214,8 @@ configurators:
         validation:
           pattern: 
           message: 
-  event-scheduler:
-    name: event-scheduler
+  event_scheduler:
+    name: event_scheduler
     label: 
     description: 
     enable_logging: false
@@ -227,7 +227,7 @@ configurators:
       language: 
       content: 
     variables:
-    - name: event-scheduler
+    - name: event_scheduler
       value: 
       mandatory: false
       input:
