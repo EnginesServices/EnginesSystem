@@ -15,7 +15,7 @@ immutable: false
 attach_post_build: false
 attach_requires_restart: false
 soft_service: false
-shareable: false
+shareable: true
 consumer_exportable: true
 consumerless: false
 target_environment_variables:
@@ -164,6 +164,26 @@ consumer_params:
       validation:
         pattern: 
         message: 
+  char_set:
+    name: char_set
+    value: utf8
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+    input:
+      label: 
+      type: string
+      title: Character set
+      comment: 
+      hint: 
+      placeholder: 
+      collection:
+        items: {}
+        include_blank: false
+      validation:
+        pattern: 
+        message: 
 configurators:
   db_master_pass:
     name: db_master_pass
@@ -194,7 +214,169 @@ configurators:
         validation:
           pattern: 
           message: 
-service_actionators: {}
+  event_scheduler:
+    name: event_scheduler
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: event_scheduler
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: select
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items:
+            '1': enabled
+            '0': disabled
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  innodb_buffer_pool_size:
+    name: innodb_buffer_pool_size
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: innodb_buffer_pool_size
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  max_allowed_packet:
+    name: max_allowed_packet
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: max_allowed_packet
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  local_infile:
+    name: local_infile
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: local_infile
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: select
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items:
+            '0': disable
+            '1': enable
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  sql_mode:
+    name: sql_mode
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: sql_mode
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+service_actionators:
+  repair_all:
+    name: repair_all
+    label: Repair databases
+    description: 
+    return_type: plain_text
+    return_file_name: 
+    timeout: ''
+    enable_logging: false
+    background: false
+    script_sudo:
+      language: 
+      content: 
+    variables: []
 constants:
   rails_flavor:
     name: rails_flavor
