@@ -214,10 +214,159 @@ configurators:
         validation:
           pattern: 
           message: 
+  event_scheduler:
+    name: event_scheduler
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: event_scheduler
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: select
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items:
+            '1': enabled
+            '0': disabled
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  innodb_buffer_pool_size:
+    name: innodb_buffer_pool_size
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: innodb_buffer_pool_size
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  max_allowed_packet:
+    name: max_allowed_packet
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: max_allowed_packet
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  local_infile:
+    name: local_infile
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: local_infile
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: select
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items:
+            '0': disable
+            '1': enable
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+  sql_mode:
+    name: sql_mode
+    label: 
+    description: 
+    enable_logging: false
+    no_save: false
+    set_script_sudo:
+      language: 
+      content: 
+    read_script_sudo:
+      language: 
+      content: 
+    variables:
+    - name: sql_mode
+      value: 
+      mandatory: false
+      input:
+        label: 
+        type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
 service_actionators:
   repair_all:
     name: repair_all
-    label: Reapir database
+    label: Repair databases
     description: 
     return_type: plain_text
     return_file_name: 
